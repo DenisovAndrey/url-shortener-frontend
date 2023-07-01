@@ -25,7 +25,7 @@
     ]
   },
   "include": [
-    "src", "cypress/**/*.ts","cypress/**/*.js", "cypress.config.ts"
+    "src", "cypress/**/*.ts", "cypress.config.ts"
   ],
   "exclude": ["cypress/support/commands.ts"]
 }
