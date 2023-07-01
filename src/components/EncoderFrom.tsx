@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useState } from 'react';
+import React, { FC, useCallback } from 'react';
 import styled from 'styled-components';
 import { FormHead } from './atoms/FormHead';
 import { InputSet } from './atoms/InputSet';
@@ -57,7 +57,7 @@ export const EncoderFrom: FC = () => {
         </ButtonsSection>
       </Section>
       )}
-      {isError && <ErrorNotification>{errorMessage}</ErrorNotification>}
+      {isError && <ErrorNotification role="alert">{errorMessage}</ErrorNotification>}
     </Form>
   );
 };

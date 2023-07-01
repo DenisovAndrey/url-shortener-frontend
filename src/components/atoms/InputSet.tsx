@@ -34,6 +34,6 @@ export const InputSet: FC<InputSetProps> = ({
 }) => (
   <Label>
     {title && <Title>{title}</Title>}
-    <Input disabled={disabled} value={value} type="text" onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e.target.value)} />
+    <Input area-label={title} disabled={disabled} value={value} type="text" onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e.target.value)} />
   </Label>
 );
