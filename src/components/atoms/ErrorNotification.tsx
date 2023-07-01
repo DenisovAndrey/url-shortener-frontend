@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-export const Button = styled.button`
+export const ErrorNotification = styled.div`
   padding: 8px 14px;
   border-radius: 8px;
-  background: #F6F4FF;
+  background: #ff94b6;
   font-size: 14px;
   font-family: 'Inter', sans-serif;
   font-weight: 600;

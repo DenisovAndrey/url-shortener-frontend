@@ -17,15 +17,23 @@ const Input = styled.input`
   border-radius: 8px;
 `;
 
+const Label = styled.label`
+  display: flex;
+  flex-direction: column;
+`;
+
 interface InputSetProps {
   value: string,
-  onChange: (v: string) => void
+  onChange?: (v: string) => void
   title?: string
+  disabled?: boolean
 }
 
-export const InputSet: FC<InputSetProps> = ({ value, onChange, title }) => (
-  <label>
+export const InputSet: FC<InputSetProps> = ({
+  value, onChange = (v) => {}, title, disabled = false,
+}) => (
+  <Label>
     {title && <Title>{title}</Title>}
-    <Input value={value} type="text" onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e.target.value)} />
-  </label>
+    <Input disabled={disabled} value={value} type="text" onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e.target.value)} />
+  </Label>
 );

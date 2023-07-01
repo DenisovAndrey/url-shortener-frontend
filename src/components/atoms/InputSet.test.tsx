@@ -19,7 +19,7 @@ describe('InputSet component', () => {
 
     render(<TestComponent initVal={value} changeFn={onChange} />);
 
-    const inputElement: HTMLInputElement = screen.getByRole('textbox', { name: 'input label' });
+    const inputElement: HTMLInputElement = screen.getByRole('textbox');
 
     expect(inputElement.value).toBe(value);
   });
@@ -29,7 +29,7 @@ describe('InputSet component', () => {
 
     render(<TestComponent changeFn={onChange} />);
 
-    const inputElement = screen.getByRole('textbox', { name: 'input label' });
+    const inputElement = screen.getByRole('textbox');
     const newValue = 'Updated Value';
 
     userEvent.type(inputElement, newValue);

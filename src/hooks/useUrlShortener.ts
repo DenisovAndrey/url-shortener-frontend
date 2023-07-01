@@ -9,10 +9,10 @@ export const useUrlShortener = () => {
   const [isError, setIsError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
-  const handleError = useCallback((error: AxiosError) => {
+  const handleError = useCallback((error: AxiosError<{ error: string }>) => {
     setTransformedUrl('');
     setIsError(true);
-    setErrorMessage(error.message);
+    setErrorMessage(error.response?.data?.error || error.message);
   }, []);
 
   const encodeUrl = useCallback(() => {
