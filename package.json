@@ -28,7 +28,7 @@
     "start": "serve -s build",
     "build": "react-scripts build",
     "lint": "eslint .",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false",
     "test:e2e": "cypress run --record false",
     "test:e2e:open": "cypress open"
   },
